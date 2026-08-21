@@ -18,13 +18,44 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ['400', '500', '600', '700', '800'],
 });
 
+const baseUrl = 'https://aaisahebfoundation.org';
+
 export const metadata: Metadata = {
   title: {
     default: 'AaiSaheb Foundation',
     template: '%s | AaiSaheb Foundation',
   },
   description:
-    'AaiSaheb Foundation works to create meaningful experiences and positive impact for specially-abled children through community events and initiatives in Navi Mumbai.',
+    'AaiSaheb Foundation is an NGO working on social welfare initiatives in Mumbai, supporting children, communities and people in need through meaningful community programmes and events.',
+  metadataBase: new URL(baseUrl),
+  alternates: {
+    canonical: '/',
+  },
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${baseUrl}/#organization`,
+  name: 'AaiSaheb Foundation',
+  url: baseUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${baseUrl}/aaisaheb-foundation.jpg`,
+  },
+  description:
+    'AaiSaheb Foundation is an NGO working on social welfare initiatives in Mumbai, supporting children, communities and people in need through meaningful community programmes and events.',
+  areaServed: {
+    '@type': 'City',
+    name: 'Mumbai',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Mumbai',
+    addressRegion: 'Maharashtra',
+    postalCode: '410210',
+    addressCountry: 'IN',
+  },
 };
 
 export default function RootLayout({
@@ -39,8 +70,17 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col font-(family-name:--font-dm-sans) text-slate-800">
         <Navbar />
+
         <main className="flex-1">{children}</main>
+
         <Footer />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </body>
     </html>
   );
