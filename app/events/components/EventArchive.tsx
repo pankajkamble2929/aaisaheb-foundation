@@ -16,7 +16,7 @@ import {
 
 const events = [
   {
-    id: 4,
+    id: 5,
     month: 'June',
     date: '25 June 2026',
     title: 'School Supplies Distribution Programme',
@@ -41,7 +41,7 @@ const events = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     month: 'May',
     date: '1 May 2026',
     title: 'Blood Donation Camp',
@@ -66,29 +66,55 @@ const events = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     month: 'March',
-    date: 'March 2026',
-    title: 'Sanitary Pad Distribution Initiative',
+    date: '8 March 2026',
+    title: 'Sanitary Pad Distribution Initiative - Kashtakari Nagar',
     category: 'Women & Adolescent Support',
     location: 'Kashtakari Nagar, Rasayani',
-    galleryHref: '/gallery/#sanitary-pad-distribution',
+    galleryHref: '/gallery/#sanitary-pad-distribution-kashtakari-nagar',
     description:
-      'AaiSaheb Foundation organised a sanitary pad distribution initiative for adolescent girls in Kashtakari Nagar, Rasayani. The programme focused on making essential menstrual hygiene products available to young girls and encouraging awareness around menstrual health and hygiene.',
+      'AaiSaheb Foundation organised a sanitary pad distribution initiative for adolescent girls in Kashtakari Nagar, Rasayani, on 8 March 2026. The programme focused on making essential menstrual hygiene products available to young girls and encouraging awareness around menstrual health and hygiene.',
     highlights: [
       'Sanitary pads were distributed to adolescent girls in the local community.',
       'The initiative focused on supporting access to essential menstrual hygiene products.',
       'The programme aimed to encourage better awareness and regular menstrual hygiene practices.',
-      'The distribution was initiated in the presence of women members of the local Gram Panchayat.',
       'The activity was planned as a practical community initiative to support adolescent girls.',
+      'The programme was supported by members of the local community.',
     ],
     contribution:
-      'The initiative marked the beginning of sanitary pad distribution for adolescent girls in the community, with women Gram Panchayat members participating in the programme and helping support the activity.',
+      'We sincerely thank Vidya Ramugude and Sagar Karpe for their valuable support and cooperation in helping organise and carry out the sanitary pad distribution initiative in Kashtakari Nagar, Rasayani.',
     photos: [
-      '/events/mar-2026/sanitary-pad-01.jpg',
+      '/events/mar-2026/sanitary-pad-kn-01.jpg',
+      '/events/mar-2026/sanitary-pad-kn-02.jpg',
+      '/events/mar-2026/sanitary-pad-kn-03.jpg',
+      '/events/mar-2026/sanitary-pad-kn-04.jpg',
+    ],
+  },
+  {
+    id: 2,
+    month: 'March',
+    date: '8 March 2026',
+    title: 'Sanitary Pad Distribution Initiative - Diva',
+    category: 'Women & Adolescent Support',
+    location: 'Diva, Thane',
+    galleryHref: '/gallery/#sanitary-pad-distribution-diva',
+    description:
+      'AaiSaheb Foundation organised a sanitary pad distribution initiative for adolescent girls in Diva on 8 March 2026. The programme focused on supporting access to essential menstrual hygiene products and encouraging awareness around menstrual health and hygiene among young girls.',
+    highlights: [
+      'Sanitary pads were distributed to adolescent girls in the local community.',
+      'The initiative focused on supporting access to essential menstrual hygiene products.',
+      'The programme aimed to encourage awareness around menstrual health and hygiene.',
+      'The activity was planned as a practical community initiative to support adolescent girls.',
+      'The programme was supported by people who came forward to contribute to the initiative.',
+    ],
+    contribution:
+      'We sincerely thank Chitra Jagtap and Sagar Karpe for their valuable support and cooperation in helping organise and carry out the sanitary pad distribution initiative in Diva.',
+    photos: [
       '/events/mar-2026/sanitary-pad-02.jpg',
       '/events/mar-2026/sanitary-pad-03.jpg',
       '/events/mar-2026/sanitary-pad-04.jpg',
+      '/events/mar-2026/sanitary-pad-05.jpg',
     ],
   },
   {
@@ -121,7 +147,7 @@ const events = [
 ];
 
 export default function EventArchive() {
-  const [openEvent, setOpenEvent] = useState<number | null>(4);
+  const [openEvent, setOpenEvent] = useState<number | null>(5);
 
   const toggleEvent = (id: number) => {
     setOpenEvent((current) => (current === id ? null : id));
