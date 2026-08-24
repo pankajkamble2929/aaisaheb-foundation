@@ -32,6 +32,7 @@ const galleries = [
       '/events/june-2026/school-supplies-24.jpg',
     ],
   },
+
   {
     id: 'blood-donation-camp',
     title: 'Blood Donation Camp',
@@ -42,6 +43,27 @@ const galleries = [
       '/events/may-2026/blood-donation-04.jpg',
     ],
   },
+
+  {
+    id: 'sanitary-pad-distribution',
+    title: 'Sanitary Pad Distribution Initiative',
+    images: [
+      '/events/mar-2026/sanitary-pad-01.jpg',
+      '/events/mar-2026/sanitary-pad-02.jpg',
+      '/events/mar-2026/sanitary-pad-03.jpg',
+      '/events/mar-2026/sanitary-pad-04.jpg',
+      '/events/mar-2026/sanitary-pad-05.jpg',
+      '/events/mar-2026/sanitary-pad-06.jpg',
+      '/events/mar-2026/sanitary-pad-07.jpg',
+      '/events/mar-2026/sanitary-pad-08.jpg',
+      '/events/mar-2026/sanitary-pad-09.jpg',
+      '/events/mar-2026/sanitary-pad-10.jpg',
+      '/events/mar-2026/sanitary-pad-11.jpg',
+      '/events/mar-2026/sanitary-pad-12.jpg',
+      '/events/mar-2026/sanitary-pad-13.jpg',
+    ],
+  },
+
   {
     id: 'hind-di-chadar',
     title: 'Hind-Di-Chadar',

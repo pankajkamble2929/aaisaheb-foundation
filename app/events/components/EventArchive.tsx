@@ -16,7 +16,7 @@ import {
 
 const events = [
   {
-    id: 3,
+    id: 4,
     month: 'June',
     date: '25 June 2026',
     title: 'School Supplies Distribution Programme',
@@ -41,7 +41,7 @@ const events = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     month: 'May',
     date: '1 May 2026',
     title: 'Blood Donation Camp',
@@ -63,6 +63,32 @@ const events = [
       '/events/may-2026/blood-donation-02.jpg',
       '/events/may-2026/blood-donation-03.jpg',
       '/events/may-2026/blood-donation-04.jpg',
+    ],
+  },
+  {
+    id: 2,
+    month: 'March',
+    date: 'March 2026',
+    title: 'Sanitary Pad Distribution Initiative',
+    category: 'Women & Adolescent Support',
+    location: 'Kashtakari Nagar, Rasayani',
+    galleryHref: '/gallery/#sanitary-pad-distribution',
+    description:
+      'AaiSaheb Foundation organised a sanitary pad distribution initiative for adolescent girls in Kashtakari Nagar, Rasayani. The programme focused on making essential menstrual hygiene products available to young girls and encouraging awareness around menstrual health and hygiene.',
+    highlights: [
+      'Sanitary pads were distributed to adolescent girls in the local community.',
+      'The initiative focused on supporting access to essential menstrual hygiene products.',
+      'The programme aimed to encourage better awareness and regular menstrual hygiene practices.',
+      'The distribution was initiated in the presence of women members of the local Gram Panchayat.',
+      'The activity was planned as a practical community initiative to support adolescent girls.',
+    ],
+    contribution:
+      'The initiative marked the beginning of sanitary pad distribution for adolescent girls in the community, with women Gram Panchayat members participating in the programme and helping support the activity.',
+    photos: [
+      '/events/mar-2026/sanitary-pad-01.jpg',
+      '/events/mar-2026/sanitary-pad-02.jpg',
+      '/events/mar-2026/sanitary-pad-03.jpg',
+      '/events/mar-2026/sanitary-pad-04.jpg',
     ],
   },
   {
@@ -95,7 +121,7 @@ const events = [
 ];
 
 export default function EventArchive() {
-  const [openEvent, setOpenEvent] = useState<number | null>(3);
+  const [openEvent, setOpenEvent] = useState<number | null>(4);
 
   const toggleEvent = (id: number) => {
     setOpenEvent((current) => (current === id ? null : id));

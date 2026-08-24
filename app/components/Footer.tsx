@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
+  ArrowRight,
   ArrowUpRight,
   CalendarDays,
   Heart,
@@ -46,16 +47,27 @@ export default function Footer() {
 
             <p className="mt-6 text-sm leading-7 text-indigo-100/75">
               Creating meaningful experiences, spreading joy and building
-              inclusive communities for specially-abled children in Navi Mumbai.
+              inclusive communities through education, community service and
+              social initiatives in Mumbai.
             </p>
 
+            {/* Highlighted Donate Button */}
             <Link
-              href="/contact/"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-indigo-200"
+              href="/donate/"
+              className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-indigo-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-50 hover:shadow-md"
             >
-              <Heart className="size-4" fill="currentColor" strokeWidth={2} />
-              <span>Support Our Cause</span>
-              <ArrowUpRight className="size-4" strokeWidth={2} />
+              <Heart
+                className="size-4 transition-transform duration-200 group-hover:scale-110"
+                fill="currentColor"
+                strokeWidth={2}
+              />
+
+              <span>Donate & Support</span>
+
+              <ArrowRight
+                className="size-4 transition-transform duration-200 group-hover:translate-x-1"
+                strokeWidth={2}
+              />
             </Link>
           </div>
 
@@ -95,17 +107,37 @@ export default function Footer() {
                     className="size-4 text-indigo-300"
                     strokeWidth={1.8}
                   />
+
                   <span>Our Events</span>
                 </Link>
               </li>
 
               <li>
                 <Link
-                  href="/contact/"
-                  className="flex items-center gap-2 text-sm text-indigo-100/70 transition-colors hover:text-white"
+                  href="/donate/"
+                  className="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-indigo-200"
                 >
-                  <Heart className="size-4 text-indigo-300" strokeWidth={1.8} />
-                  <span>Support Our Cause</span>
+                  <Heart
+                    className="size-4 text-indigo-300"
+                    fill="currentColor"
+                    strokeWidth={1.8}
+                  />
+
+                  <span>Donate</span>
+
+                  <ArrowUpRight
+                    className="size-3.5 text-indigo-300"
+                    strokeWidth={2}
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/gallery/"
+                  className="text-sm text-indigo-100/70 transition-colors hover:text-white"
+                >
+                  View Our Gallery
                 </Link>
               </li>
             </ul>
@@ -132,14 +164,15 @@ export default function Footer() {
               </div>
 
               <a
-                href="tel:+918976091721"
+                href="tel:+918879161958"
                 className="flex items-center gap-3 text-sm text-indigo-100/70 transition-colors hover:text-white"
               >
                 <Phone
                   className="size-4 shrink-0 text-indigo-300"
                   strokeWidth={1.8}
                 />
-                <span>+91 89760 91721</span>
+
+                <span>+91 88791 61958</span>
               </a>
 
               <a
@@ -150,6 +183,7 @@ export default function Footer() {
                   className="size-4 shrink-0 text-indigo-300"
                   strokeWidth={1.8}
                 />
+
                 <span>info@aaisahebfoundation.org</span>
               </a>
             </div>

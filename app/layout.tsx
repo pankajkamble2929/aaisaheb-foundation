@@ -3,6 +3,7 @@ import { DM_Sans, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const dmSans = DM_Sans({
   variable: '--font-dm-sans',
@@ -74,6 +75,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         <Footer />
+        <WhatsAppButton />
 
         <script
           type="application/ld+json"

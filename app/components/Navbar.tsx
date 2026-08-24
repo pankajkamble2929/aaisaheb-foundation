@@ -66,9 +66,9 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Navigation + CTA */}
-        <div className="hidden items-center gap-7 md:flex lg:gap-9">
-          <nav className="flex items-center gap-6 lg:gap-8">
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-6 md:flex lg:gap-8">
+          <nav className="flex items-center gap-5 lg:gap-7">
             {navItems.map((item) => {
               const Icon = item.icon;
 
@@ -82,19 +82,29 @@ export default function Navbar() {
                     className="size-4 text-indigo-700/70 transition-colors group-hover:text-indigo-800"
                     strokeWidth={1.8}
                   />
+
                   <span>{item.label}</span>
                 </Link>
               );
             })}
           </nav>
 
+          {/* Donate Button */}
           <Link
-            href="/contact/"
-            className="inline-flex items-center gap-2 rounded-full bg-indigo-800 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-indigo-900 hover:shadow-md"
+            href="/donate/"
+            className="group inline-flex items-center gap-2 rounded-full bg-indigo-800 px-5 py-2.5 text-sm font-semibold text-white shadow-md ring-2 ring-indigo-800/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-indigo-900 hover:shadow-lg"
           >
-            <HandHeart className="size-4" strokeWidth={2} />
-            <span>Support Our Cause</span>
-            <ArrowRight className="size-4" strokeWidth={2} />
+            <HandHeart
+              className="size-4 transition-transform duration-200 group-hover:scale-110"
+              strokeWidth={2}
+            />
+
+            <span>Donate</span>
+
+            <ArrowRight
+              className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
+              strokeWidth={2}
+            />
           </Link>
         </div>
 
@@ -133,18 +143,22 @@ export default function Navbar() {
                   className="flex items-center gap-3 border-b border-slate-100 py-4 text-sm font-medium text-slate-700 transition-colors hover:text-indigo-800"
                 >
                   <Icon className="size-4 text-indigo-700" strokeWidth={1.8} />
+
                   <span>{item.label}</span>
                 </Link>
               );
             })}
 
+            {/* Mobile Donate Button */}
             <Link
-              href="/contact/"
+              href="/donate/"
               onClick={() => setIsOpen(false)}
-              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-800 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-900"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-indigo-800 px-6 py-3.5 text-sm font-semibold text-white shadow-md ring-2 ring-indigo-800/10 transition-all duration-200 hover:bg-indigo-900"
             >
               <HandHeart className="size-4" strokeWidth={2} />
-              <span>Support Our Cause</span>
+
+              <span>Donate & Support Our Cause</span>
+
               <ArrowRight className="size-4" strokeWidth={2} />
             </Link>
           </div>
